@@ -1,0 +1,174 @@
+/* Remove outline on the forms and links */
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Verdana', sans-serif;
+}
+
+.app {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 700px;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.add-ticket-btn-container {
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+}
+
+.add-ticket-btn,
+.modal-add__cancel-btn,
+.modal-add__confirm-btn,
+.modal-edit__cancel-btn,
+.modal-edit__confirm-btn,
+.modal-del__cancel-btn,
+.modal-del__confirm-btn {
+  display: block;
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ticket {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.ticket__main {
+  display: flex;
+}
+
+.ticket__check-mark,
+.ticket__edit-btn,
+.ticket__delete-btn {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.ticket__name {
+  cursor: pointer;
+}
+
+.ticket__name,
+.ticket__created {
+  display: flex;
+  width: 388px;
+  height: 30px;
+  margin-left: 15px;
+  align-items: center;
+}
+
+.ticket__description {
+  margin: 15px 0 0 45px;
+  width: 370px;
+}
+
+.ticket__created {
+  width: 154px;
+}
+
+.ticket__edit-btn,
+.ticket__delete-btn {
+  margin-left: 15px;
+}
+
+.modal-add,
+.modal-edit,
+.modal-del {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -142px;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 400px;
+  height: 284px;
+  padding: 15px 30px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.modal-del {
+  height: 168px;
+  margin-top: -84px;
+}
+
+#add-name,
+#add-description,
+#edit-name,
+#edit-description {
+  width: 332px;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.modal-add__title,
+.modal-edit__title,
+.modal-del__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-add__name-title,
+.modal-add__description-title,
+.modal-edit__name-title,
+.modal-edit__description-title,
+.modal-del__description {
+  margin-bottom: 15px;
+}
+
+.modal-add__btns,
+.modal-edit__btns,
+.modal-del__btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-add__confirm-btn,
+.modal-edit__confirm-btn,
+.modal-del__confirm-btn {
+  margin-left: 15px;
+}
+
+.active {
+  display: flex;
+}
+
+.disabled {
+  pointer-events: none;
+}

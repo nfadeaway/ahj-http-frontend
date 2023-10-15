@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework</title>
+</head>
+<body>
+  <div class="app">
+    <div class="main-container">
+      <div class="add-ticket-btn-container">
+        <div class="add-ticket-btn">Добавить тикет</div>
+      </div>
+      <div class="tickets">
+<!--        <div class="ticket">-->
+<!--          <div class="ticket__main">-->
+<!--            <div class="ticket__check-mark">&#128504;</div>-->
+<!--            <div class="ticket__name">Поменять краску в принтере, ком. 404</div>-->
+<!--            <div class="ticket__created">10.03.19 08.40</div>-->
+<!--            <div class="ticket__edit-btn">&#9998;</div>-->
+<!--            <div class="ticket__delete-btn">X</div>-->
+<!--          </div>-->
+<!--          <div class="ticket__description">В кабинете поменять краску в принтере, ком. 404 и расписаться в журнале</div>-->
+<!--        </div>-->
+<!--        <div class="ticket">-->
+<!--          <div class="ticket__check-mark">&#128504;</div>-->
+<!--          <div class="ticket__name">Поменять краску в принтере, ком. 404</div>-->
+<!--          <div class="ticket__created">10.03.19 08.40</div>-->
+<!--          <div class="ticket__edit-btn">&#9998;</div>-->
+<!--          <div class="ticket__delete-btn">X</div>-->
+<!--        </div>-->
+<!--        <div class="ticket">-->
+<!--          <div class="ticket__check-mark">&#128504;</div>-->
+<!--          <div class="ticket__name">Поменять краску в принтере, ком. 404</div>-->
+<!--          <div class="ticket__created">10.03.19 08.40</div>-->
+<!--          <div class="ticket__edit-btn">&#9998;</div>-->
+<!--          <div class="ticket__delete-btn">X</div>-->
+<!--        </div>-->
+      </div>
+    </div>
+    <div class="modal modal-add">
+      <div class="modal-add__title">Добавить тикет</div>
+      <label for="add-name" class="modal-add__name-title">Краткое описание</label>
+      <textarea id="add-name" rows="1" cols="33"></textarea>
+      <label for="add-description" class="modal-add__description-title">Подробное описание</label>
+      <textarea id="add-description" rows="3" cols="33"></textarea>
+      <div class="modal-add__btns">
+        <div class="modal-add__cancel-btn cancel">Отмена</div>
+        <div class="modal-add__confirm-btn">Ок</div>
+      </div>
+    </div>
+    <div class="modal modal-edit">
+      <div class="modal-edit__title">Изменить тикет</div>
+      <label for="edit-name" class="modal-edit__name-title">Краткое описание</label>
+      <textarea id="edit-name" rows="1" cols="33"></textarea>
+      <label for="edit-description" class="modal-add__description-title">Подробное описание</label>
+      <textarea id="edit-description" rows="3" cols="33"></textarea>
+      <div class="modal-edit__btns">
+        <div class="modal-edit__cancel-btn cancel">Отмена</div>
+        <div class="modal-edit__confirm-btn">Ок</div>
+      </div>
+    </div>
+    <div class="modal modal-del">
+      <div class="modal-del__title">Удалить тикет</div>
+      <div class="modal-del__description">Вы уверены, что хотите удалить тикет? Это действие необратимо.</div>
+      <div class="modal-del__btns">
+        <div class="modal-del__cancel-btn cancel">Отмена</div>
+        <div class="modal-del__confirm-btn">Ок</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
