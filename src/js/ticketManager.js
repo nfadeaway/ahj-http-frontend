@@ -2,7 +2,8 @@ export default class TicketManager {
   constructor(container) {
     this.addTicketBtn = container.querySelector(".add-ticket-btn");
     this.ticketsContainer = container.querySelector(".tickets");
-    this.baseURL = 'http://127.0.0.1:7071/'
+    this.modalDelTicket = document.querySelector(".modal-del");
+    this.baseURL = "http://127.0.0.1:7071/";
   }
 
   renderTicket(ticketData) {
@@ -111,7 +112,9 @@ export default class TicketManager {
       body: JSON.stringify(ticketData),
     });
     if (response.status === 201) {
-      location.reload();
+      let ticketId = await response.json()
+      ticketData.id = ticketId.id
+      this.ticketsContainer.appendChild(this.renderTicket(ticketData));
     } else {
       console.log("Ошибка");
     }
@@ -133,7 +136,11 @@ export default class TicketManager {
       },
     );
     if (response.status === 200) {
-      location.reload();
+      targetTicket.querySelector(".ticket__name").textContent = ticketName;
+      if (targetTicket.querySelector(".ticket__description")) {
+        targetTicket.querySelector(".ticket__description").textContent =
+          ticketDescription;
+      }
     } else {
       console.log("Ошибка");
     }
@@ -147,7 +154,8 @@ export default class TicketManager {
       },
     );
     if (response.status === 204) {
-      location.reload();
+      targetTicket.remove();
+      this.modalDelTicket.classList.remove("active");
     } else if (response.status === 404) {
       console.log("Ошибка");
     }

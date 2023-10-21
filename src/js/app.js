@@ -29,6 +29,8 @@ addTicketBtn.addEventListener("click", () => {
       modalAddTicket.querySelector("#add-description").value;
     ticketManager.createTicket(ticketName, ticketDescription);
     modalAddTicket.classList.remove("active");
+    modalAddTicket.querySelector("#add-name").value = ''
+    modalAddTicket.querySelector("#add-description").value = ''
     modalAddTicket
       .querySelector(".modal-add__confirm-btn")
       .removeEventListener("click", onClickConfirmAdd);
